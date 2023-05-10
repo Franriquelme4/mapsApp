@@ -1,0 +1,7 @@
+<div #map id="map"></div>
+
+<ul class="list-group">
+  <li  class="list-group-item mb-1" [ngStyle]="{backgroundColor:colorMarker.color}" *ngFor="let colorMarker of markers; let i = index"  (dblclick)="deleteMarker(i)" (click)="flyTo(colorMarker.marker)">Marcador {{i + 1}}</li>
+</ul>
+
+<button class="btn btn-primary" (click)="createMarker()">+ Agregar Marcador</button>
